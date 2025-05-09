@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - MONGODB_URL=mongodb+srv://orbit:KtH0rl3eVCJpl4Ww@orbit.gxll1hy.mongodb.net/?retryWrites=true&w=majority&appName=orbit
+      - DATABASE_NAME=todo_db
+    volumes:
+      - .:/app
+    restart: unless-stopped 

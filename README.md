@@ -4,6 +4,8 @@ API simples de To Do List usando FastAPI e MongoDB Atlas.
 
 ## Configuração
 
+### Opção 1: Execução Local
+
 1. Crie um ambiente virtual:
 ```bash
 python -m venv venv
@@ -23,10 +25,23 @@ MONGODB_URL=sua_url_do_mongodb_atlas
 DATABASE_NAME=todo_db
 ```
 
-## Executando a aplicação
-
+4. Execute a aplicação:
 ```bash
 uvicorn main:app --reload
+```
+
+### Opção 2: Execução com Docker
+
+1. Certifique-se de ter o Docker e o Docker Compose instalados
+
+2. Construa e inicie os containers:
+```bash
+docker-compose up --build
+```
+
+3. Para parar os containers:
+```bash
+docker-compose down
 ```
 
 A API estará disponível em `http://localhost:8000`
